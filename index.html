@@ -7,387 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        :root {
-            --bg-dark: #0b0f19;
-            --card-bg: rgba(22, 30, 49, 0.7);
-            --border-color: rgba(255, 255, 255, 0.1);
-            --neon-cyan: #00f2fe;
-            --neon-purple: #9d4edd;
-            --text-white: #f8fafc;
-            --text-dim: #94a3b8;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Prompt', 'Plus Jakarta Sans', sans-serif;
-        }
-
-        body.dark-theme {
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            line-height: 1.6;
-        }
-
-        .main-header {
-            background: rgba(11, 15, 25, 0.85);
-            backdrop-filter: blur(12px);
-            position: sticky;
-            top: 0;
-            z-index: 99;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .text-neon { color: var(--neon-cyan); }
-
-        .navigation {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .nav-btn {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: 0.3s;
-        }
-
-        .nav-btn.active, .nav-btn:hover {
-            color: var(--neon-cyan);
-        }
-
-        .futuristic-hero {
-            text-align: center;
-            padding: 4rem 1.5rem 2rem 1.5rem;
-        }
-
-        .futuristic-hero h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-        }
-
-        .futuristic-hero p {
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            margin-top: 0.8rem;
-        }
-
-        .why-us-futuristic {
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            text-align: center;
-        }
-
-        .section-tag {
-            color: var(--neon-cyan);
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            margin-bottom: 0.3rem;
-        }
-
-        .why-us-futuristic h2 {
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .glow-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .glow-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            transition: 0.3s;
-            text-align: left;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .glow-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--neon-cyan);
-            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
-        }
-
-        .glow-card.feature {
-            border-color: rgba(157, 78, 221, 0.4);
-        }
-
-        .card-icon {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .card-icon.cyan { color: var(--neon-cyan); }
-        .card-icon.purple { color: var(--neon-purple); }
-        .card-icon.green { color: #10b981; }
-
-        .glow-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .glow-card p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .card-stat {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--neon-cyan);
-            background: rgba(255,255,255,0.05);
-            padding: 0.3rem 0.8rem;
-            border-radius: 6px;
-            width: fit-content;
-        }
-
-        .jobs-display {
-            max-width: 1100px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .jobs-header h2 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-        }
-
-        .job-cards-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .modern-job-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 1.8rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.3s;
-        }
-
-        .modern-job-card:hover {
-            background: rgba(30, 41, 59, 0.8);
-        }
-
-        .job-badge {
-            font-size: 0.75rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-
-        .job-badge.purple { background: rgba(157, 78, 221, 0.2); color: var(--neon-purple); }
-        .job-badge.cyan { background: rgba(0, 242, 254, 0.2); color: var(--neon-cyan); }
-        .job-badge.green { background: rgba(16, 185, 129, 0.2); color: #10b981; }
-        .job-badge.amber { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
-        .job-badge.red { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
-
-        .job-meta h3 {
-            font-size: 1.25rem;
-            margin: 0.5rem 0 0.2rem 0;
-        }
-
-        .salary-tag {
-            color: #10b981;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .job-desc {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
-
-        .btn-action {
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
-            color: #000;
-            font-weight: 700;
-            border: none;
-            padding: 0.8rem 1.4rem;
-            border-radius: 8px;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: 0.3s;
-        }
-
-        .btn-action:hover {
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-            transform: scale(1.02);
-        }
-
-        .custom-modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal-card {
-            background: #111827;
-            border: 1px solid var(--border-color);
-            padding: 2.5rem 2rem 2rem 2rem;
-            border-radius: 16px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 85vh;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .modal-card.modal-lg { max-width: 720px; }
-
-        .modal-card::-webkit-scrollbar { width: 8px; }
-        .modal-card::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 4px; }
-        .modal-card::-webkit-scrollbar-thumb { background: var(--neon-cyan); border-radius: 4px; }
-
-        .modal-close {
-            position: absolute;
-            right: 1.2rem; top: 1rem;
-            background: none;
-            border: none;
-            color: var(--text-dim);
-            font-size: 1.8rem;
-            cursor: pointer;
-        }
-
-        .detail-header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .detail-header h2 {
-            font-size: 1.6rem;
-            color: var(--text-white);
-        }
-
-        .detail-company {
-            color: var(--neon-cyan);
-            font-size: 0.95rem;
-            margin-top: 0.3rem;
-        }
-
-        .detail-section-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #f8fafc;
-            margin: 1.2rem 0 0.6rem 0;
-        }
-
-        .detail-list {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            color: var(--text-dim);
-            font-size: 0.95rem;
-        }
-
-        .detail-list li { margin-bottom: 0.4rem; }
-
-        .about-container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .tor-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 16px;
-        }
-
-        .tor-list {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .input-grid { display: flex; gap: 1rem; }
-        .field-box { flex: 1; margin-top: 1rem; }
-        .field-box.full { width: 100%; }
-        .field-box label { font-size: 0.85rem; color: var(--text-dim); display: block; margin-bottom: 0.3rem; }
-        .field-box input, .field-box select, .field-box textarea {
-            width: 100%;
-            padding: 0.65rem;
-            background: #1f293d;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: white;
-        }
-
-        .alert-box {
-            display: none;
-            background: rgba(239, 68, 68, 0.2);
-            border: 1px solid #ef4444;
-            color: #fca5a5;
-            padding: 0.8rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .btn-submit-neon {
-            width: 100%;
-            margin-top: 1.5rem;
-            background: var(--neon-cyan);
-            color: #000;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        .view-page { display: none; }
-        .view-page.active { display: block; }
-
-        @media (max-width: 768px) {
-            .modern-job-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
-            .input-grid { flex-direction: column; gap: 0; }
-            .header-container { flex-direction: column; gap: 1rem; }
-        }
-    </style>
+    <!-- เรียกใช้งานไฟล์ CSS จากโฟลเดอร์ css -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="dark-theme">
 
@@ -399,21 +20,20 @@
                 <span>FutureTech<span class="text-gradient">Jobs</span></span>
             </div>
             <nav class="navigation">
-                <a href="#" id="link-home" class="nav-btn active" onclick="navigate('home')"><i class="fa-solid fa-house-laptop"></i> Home</a>
-                <a href="#" id="link-services" class="nav-btn" onclick="navigate('services')"><i class="fa-solid fa-graduation-cap"></i> Services & Certify</a>
-                <a href="#" id="link-about" class="nav-btn" onclick="navigate('about')"><i class="fa-solid fa-shield-halved"></i> About TOR</a>
+                <a href="javascript:void(0)" id="link-home" class="nav-btn active" onclick="navigate('home')"><i class="fa-solid fa-house-laptop"></i> Home</a>
+                <a href="javascript:void(0)" id="link-services" class="nav-btn" onclick="navigate('services')"><i class="fa-solid fa-graduation-cap"></i> Services & Certify</a>
+                <a href="javascript:void(0)" id="link-about" class="nav-btn" onclick="navigate('about')"><i class="fa-solid fa-shield-halved"></i> About TOR</a>
             </nav>
         </div>
     </header>
 
-    <!-- ================= PAGE 1: HOME PAGE (5 ตำแหน่งงาน) ================= -->
+    <!-- ================= PAGE 1: HOME PAGE ================= -->
     <main id="page-home" class="view-page active">
         <section class="futuristic-hero">
             <h1>ขับเคลื่อนอาชีพคุณเข้าสู่ยุค <br><span class="text-gradient">Artificial Intelligence</span></h1>
             <p>ศูนย์รวมตำแหน่งงานสายปัญญาประดิษฐ์ ดิจิทัล และหลักสูตรสอบใบรับรองสากลระดับสูง</p>
         </section>
 
-        <!-- Why Work With Us -->
         <section class="why-us-futuristic">
             <div class="section-tag">WHY WORK WITH US</div>
             <h2>ทำไมต้องร่วมงานสาย AI กับเรา?</h2>
@@ -442,14 +62,12 @@
             </div>
         </section>
 
-        <!-- รายการตำแหน่งงาน 5 ตำแหน่ง -->
         <section class="jobs-display">
             <div class="jobs-header">
                 <h2><i class="fa-solid fa-fire text-neon"></i> ตำแหน่งงาน AI ล่าสุดในประเทศไทย</h2>
             </div>
 
             <div class="job-cards-container">
-                <!-- Job 1 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge purple">AI & ML</span>
@@ -461,7 +79,6 @@
                     <button class="btn-action" onclick="openJobDetail(1)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Job 2 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge cyan">Data Science</span>
@@ -473,7 +90,6 @@
                     <button class="btn-action" onclick="openJobDetail(2)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Job 3 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge green">Generative AI</span>
@@ -485,7 +101,6 @@
                     <button class="btn-action" onclick="openJobDetail(3)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Job 4 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge amber">Development</span>
@@ -497,7 +112,6 @@
                     <button class="btn-action" onclick="openJobDetail(4)">ดูรายละเอียด <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Job 5 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge red">Cloud Tech</span>
@@ -512,7 +126,7 @@
         </section>
     </main>
 
-    <!-- ================= PAGE 2: SERVICES & CERTIFY (8 หลักสูตรอบรม) ================= -->
+    <!-- ================= PAGE 2: SERVICES & CERTIFY ================= -->
     <main id="page-services" class="view-page">
         <section class="futuristic-hero">
             <h1>Training & <span class="text-gradient">Certifications</span></h1>
@@ -525,7 +139,6 @@
             </div>
 
             <div class="job-cards-container">
-                <!-- Course 1 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge purple">Certify</span>
@@ -536,7 +149,6 @@
                     <button class="btn-action" onclick="openApplyFormForCourse('Certified Generative AI & LLM Engineer Masterclass')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Course 2 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge cyan">Certify</span>
@@ -547,7 +159,6 @@
                     <button class="btn-action" onclick="openApplyFormForCourse('Professional Data Science & Big Data Analytics')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Course 3 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge green">Certify</span>
@@ -558,7 +169,6 @@
                     <button class="btn-action" onclick="openApplyFormForCourse('Advanced Prompt Engineering for Enterprise AI')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Course 4 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge amber">Certify</span>
@@ -569,7 +179,6 @@
                     <button class="btn-action" onclick="openApplyFormForCourse('Full-Stack AI Application Developer Bootcamp')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Course 5 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge red">Certify</span>
@@ -580,7 +189,6 @@
                     <button class="btn-action" onclick="openApplyFormForCourse('Cloud & AI Infrastructure DevOps Masterclass')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Course 6 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge purple">Certify</span>
@@ -591,7 +199,6 @@
                     <button class="btn-action" onclick="openApplyFormForCourse('AI Cybersecurity & Data Privacy Governance')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Course 7 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge cyan">Certify</span>
@@ -602,7 +209,6 @@
                     <button class="btn-action" onclick="openApplyFormForCourse('Business Intelligence & AI for Executive Leaders')">ลงทะเบียนอบรม <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Course 8 -->
                 <div class="modern-job-card">
                     <div class="job-meta">
                         <span class="job-badge green">Certify</span>
@@ -616,7 +222,7 @@
         </section>
     </main>
 
-    <!-- ================= PAGE 3: ABOUT PAGE (เกี่ยวกับเรา & TOR) ================= -->
+    <!-- ================= PAGE 3: ABOUT PAGE (TOR) ================= -->
     <main id="page-about" class="view-page">
         <section class="futuristic-hero">
             <h1>About <span class="text-gradient">FutureTechJobs</span></h1>
@@ -624,7 +230,6 @@
         </section>
 
         <div class="about-container">
-            <!-- 1. ประวัติความเป็นมา & วิสัยทัศน์ -->
             <div class="glow-cards-grid" style="margin-bottom: 2rem;">
                 <div class="glow-card">
                     <div class="card-icon cyan"><i class="fa-solid fa-clock-rotate-left"></i></div>
@@ -639,7 +244,6 @@
                 </div>
             </div>
 
-            <!-- 2. ค่านิยมองค์กร (Core Values) -->
             <div class="tor-box" style="margin-bottom: 2rem;">
                 <h3><i class="fa-solid fa-gem text-neon"></i> ค่านิยมองค์กร (Core Values)</h3>
                 <div class="glow-cards-grid" style="margin-top: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
@@ -658,9 +262,7 @@
                 </div>
             </div>
 
-            <!-- 3. ข้อมูลบริษัท & ข้อมูลการติดต่อตามข้อกำหนด TOR -->
             <div class="glow-cards-grid" style="margin-bottom: 2rem;">
-                <!-- ข้อมูลบริษัท & ผู้ติดต่อ -->
                 <div class="glow-card feature">
                     <div class="card-icon cyan"><i class="fa-solid fa-building text-neon"></i></div>
                     <h3>ข้อมูลบริษัท (Company Info)</h3>
@@ -671,7 +273,6 @@
                     </div>
                 </div>
 
-                <!-- ข้อมูลการติดต่อ & ที่อยู่ ม.กรุงเทพ -->
                 <div class="glow-card">
                     <div class="card-icon green"><i class="fa-solid fa-location-dot"></i></div>
                     <h3>ช่องทางการติดต่อ (Contact Details)</h3>
@@ -683,20 +284,19 @@
                 </div>
             </div>
 
-            <!-- 4. TOR Checklist -->
             <div class="tor-box">
                 <h3><i class="fa-solid fa-list-check"></i> ข้อกำหนดและขอบเขตงาน (TOR Checklist)</h3>
                 <div class="tor-list">
-                    <div class="tor-item"><i class="fa-solid fa-circle-check text-neon"></i> เว็บไซต์รองรับการสมัครงานในตำแหน่ง AI และดิจิทัลชั้นนำ</div>
-                    <div class="tor-item"><i class="fa-solid fa-circle-check text-neon"></i> เว็บไซต์มีระบบข้อมูลการจัดอบรม สัมมนา และการสอบ Certify สากล</div>
-                    <div class="tor-item"><i class="fa-solid fa-circle-check text-neon"></i> หน้าเว็บแสดงผลแบบ Responsive รองรับทั้ง Desktop, Tablet และ Mobile</div>
-                    <div class="tor-item"><i class="fa-solid fa-circle-check text-neon"></i> มีระบบฟอร์มสมัครงาน/ลงทะเบียนพร้อมระบบตรวจสอบความถูกต้อง (Validation)</div>
+                    <div class="tor-item"><i class="fa-solid fa-circle-check text-neon"></i> เว็บไซต์รองรับการสมัครงานในตำแหน่ง AI และดิจิทัลชั้นนำ[cite: 1]</div>
+                    <div class="tor-item"><i class="fa-solid fa-circle-check text-neon"></i> เว็บไซต์มีระบบข้อมูลการจัดอบรม สัมมนา และการสอบ Certify สากล[cite: 1]</div>
+                    <div class="tor-item"><i class="fa-solid fa-circle-check text-neon"></i> หน้าเว็บแสดงผลแบบ Responsive รองรับทั้ง Desktop, Tablet และ Mobile[cite: 1]</div>
+                    <div class="tor-item"><i class="fa-solid fa-circle-check text-neon"></i> มีระบบฟอร์มสมัครงาน/ลงทะเบียนพร้อมระบบตรวจสอบความถูกต้อง (Validation)[cite: 1]</div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Modal 1: ป๊อปอัปรายละเอียดงาน -->
+    <!-- Modals -->
     <div id="modalDetail" class="custom-modal">
         <div class="modal-card modal-lg">
             <button class="modal-close" onclick="closeJobDetail()">&times;</button>
@@ -704,45 +304,26 @@
         </div>
     </div>
 
-    <!-- Modal 2: ฟอร์มสมัครงาน / ลงทะเบียน -->
     <div id="modalApply" class="custom-modal">
         <div class="modal-card">
             <button class="modal-close" onclick="closeApplyForm()">&times;</button>
             <h3 id="formJobTitle">แบบฟอร์มส่งข้อมูล</h3>
-            
             <div id="validationError" class="alert-box"></div>
-
             <form id="jobForm" onsubmit="processSubmit(event)">
                 <div class="field-box full">
                     <label id="targetLabel">รายการที่ต้องการสมัคร / ลงทะเบียน *</label>
                     <select id="targetSelect"></select>
                 </div>
-
                 <div class="input-grid">
-                    <div class="field-box">
-                        <label>ชื่อ *</label>
-                        <input type="text" id="fName" placeholder="กรอกชื่อจริง">
-                    </div>
-                    <div class="field-box">
-                        <label>นามสกุล *</label>
-                        <input type="text" id="lName" placeholder="กรอกนามสกุล">
-                    </div>
+                    <div class="field-box"><label>ชื่อ *</label><input type="text" id="fName" placeholder="กรอกชื่อจริง"></div>
+                    <div class="field-box"><label>นามสกุล *</label><input type="text" id="lName" placeholder="กรอกนามสกุล"></div>
                 </div>
-
                 <div class="input-grid">
-                    <div class="field-box">
-                        <label>อีเมล *</label>
-                        <input type="email" id="uEmail" placeholder="name@domain.com">
-                    </div>
-                    <div class="field-box">
-                        <label>เบอร์โทรศัพท์ *</label>
-                        <input type="tel" id="uPhone" placeholder="08X-XXX-XXXX">
-                    </div>
+                    <div class="field-box"><label>อีเมล *</label><input type="email" id="uEmail" placeholder="name@domain.com"></div>
+                    <div class="field-box"><label>เบอร์โทรศัพท์ *</label><input type="tel" id="uPhone" placeholder="08X-XXX-XXXX"></div>
                 </div>
-
                 <div class="input-grid">
-                    <div class="field-box">
-                        <label>เพศ *</label>
+                    <div class="field-box"><label>เพศ *</label>
                         <select id="uGender">
                             <option value="">-- เลือกเพศ --</option>
                             <option value="ชาย">ชาย</option>
@@ -750,8 +331,7 @@
                             <option value="อื่นๆ">อื่นๆ</option>
                         </select>
                     </div>
-                    <div class="field-box">
-                        <label>ประเทศ *</label>
+                    <div class="field-box"><label>ประเทศ *</label>
                         <select id="uCountry">
                             <option value="ประเทศไทย">ประเทศไทย</option>
                             <option value="จีน">จีน</option>
@@ -760,27 +340,17 @@
                         </select>
                     </div>
                 </div>
-
-                <div class="field-box full">
-                    <label>ที่อยู่ *</label>
-                    <textarea id="uAddress" rows="2" placeholder="ที่อยู่ปัจจุบัน..."></textarea>
-                </div>
-
+                <div class="field-box full"><label>ที่อยู่ *</label><textarea id="uAddress" rows="2" placeholder="ที่อยู่ปัจจุบัน..."></textarea></div>
                 <div class="input-grid">
-                    <div class="field-box">
-                        <label>รหัสไปรษณีย์ *</label>
-                        <input type="text" id="uZip" placeholder="10XXX">
-                    </div>
-                    <div class="field-box" id="resumeFieldGroup">
-                        <label id="resumeLabel">อัปโหลด Portfolio / Resume (PDF) *</label>
-                        <input type="file" id="uResume" accept=".pdf,.doc,.docx">
-                    </div>
+                    <div class="field-box"><label>รหัสไปรษณีย์ *</label><input type="text" id="uZip" placeholder="10XXX"></div>
+                    <div class="field-box" id="resumeFieldGroup"><label id="resumeLabel">อัปโหลด Portfolio / Resume (PDF) *</label><input type="file" id="uResume" accept=".pdf,.doc,.docx"></div>
                 </div>
-
                 <button type="submit" class="btn-submit-neon">ยืนยันส่งข้อมูล</button>
             </form>
         </div>
     </div>
+
+    <!-- เรียกใช้ไฟล์ JavaScript จากโฟลเดอร์ js -->
     <script src="./js/script.js"></script>
 </body>
 </html>

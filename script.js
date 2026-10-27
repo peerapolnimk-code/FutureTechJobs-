@@ -1,4 +1,3 @@
-// รายชื่อ 5 ตำแหน่งงาน (สำหรับหน้า Home)
 const jobOptions = [
     { value: "AI & Machine Learning Engineer", label: "1. AI & Machine Learning Engineer (KBTG)" },
     { value: "Senior Data Scientist", label: "2. Senior Data Scientist (True Digital)" },
@@ -7,7 +6,6 @@ const jobOptions = [
     { value: "Cloud & AI Infrastructure Engineer", label: "5. Cloud & AI Infrastructure Engineer (AIS)" }
 ];
 
-// รายชื่อ 8 หลักสูตรอบรม & สอบ Certify (สำหรับหน้า Services)
 const courseOptions = [
     { value: "Certified Generative AI & LLM Engineer Masterclass", label: "1. Certified Generative AI & LLM Engineer Masterclass" },
     { value: "Professional Data Science & Big Data Analytics", label: "2. Professional Data Science & Big Data Analytics" },
@@ -19,7 +17,6 @@ const courseOptions = [
     { value: "UI/UX Design for AI-Powered Products & Web", label: "8. UI/UX Design for AI-Powered Products & Web" }
 ];
 
-// ข้อมูลรายละเอียดของทั้ง 5 ตำแหน่งงาน
 const jobDetailsData = {
     1: {
         title: "AI & Machine Learning Engineer",
@@ -150,7 +147,6 @@ const jobDetailsData = {
 
 let currentFormMode = 'job';
 
-// ฟังก์ชันเปิดดูรายละเอียดงาน (หน้า Home)
 function openJobDetail(jobId) {
     const job = jobDetailsData[jobId];
     if (!job) return;
@@ -191,7 +187,6 @@ function closeJobDetail() {
     document.getElementById('modalDetail').style.display = "none";
 }
 
-// ฟังก์ชันสลับหน้า
 function navigate(page) {
     document.querySelectorAll('.view-page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -200,7 +195,6 @@ function navigate(page) {
     document.getElementById('link-' + page).classList.add('active');
 }
 
-// เปิด Modal ฟอร์มสมัครงาน (แสดงช่องอัปโหลดเรซูเม่)
 function openApplyFormForJob(selectedTitle) {
     currentFormMode = 'job';
     document.getElementById('formJobTitle').innerText = "แบบฟอร์มสมัครงาน";
@@ -222,7 +216,6 @@ function openApplyFormForJob(selectedTitle) {
     document.getElementById('validationError').style.display = "none";
 }
 
-// เปิด Modal ฟอร์มลงทะเบียนอบรม (ซ่อนช่องอัปโหลดเรซูเม่)
 function openApplyFormForCourse(selectedTitle) {
     currentFormMode = 'course';
     document.getElementById('formJobTitle').innerText = "แบบฟอร์มลงทะเบียนอบรม / สอบ Certify";
@@ -248,7 +241,6 @@ function closeApplyForm() {
     document.getElementById('modalApply').style.display = "none";
 }
 
-// ระบบตรวจสอบความถูกต้องของข้อมูล (Validation)
 function processSubmit(e) {
     e.preventDefault();
 
