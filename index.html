@@ -4,134 +4,174 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FutureTechJobs - Next-Gen AI & Tech Talent Platform</title>
+  
+  <!-- Font Prompt & FontAwesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Link External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- แถบเมนูหลัก Navbar (3 เมนูหลักตามต้องการ) -->
   <nav class="navbar">
+    <div class="nav-brand">FutureTechJobs</div>
     <ul class="nav-links">
       <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
       <li><a href="#services" class="nav-link"><i class="fa-solid fa-box-archive"></i> Services & Certify</a></li>
       <li><a href="#about" class="nav-link"><i class="fa-solid fa-shield-halved"></i> About TOR</a></li>
     </ul>
   </nav>
-  <div class="container" id="home">
-    <h2 class="section-title">ตำแหน่งงาน AI & Digital ที่เปิดรับสมัคร</h2>
-    <div class="card-list">
-      <div class="card">
-        <div class="card-info">
-          <span class="card-tag">KBTG</span>
-          <h3 class="card-title">Senior AI/ML Engineer</h3>
-          <p class="card-desc">ออกแบบ พัฒนา และติดตั้งระบบ Machine Learning และ LLM สำหรับระบบการเงินระดับประเทศ</p>
-        </div>
-        <a href="#register" class="btn-gradient">ดูรายละเอียด &rarr;</a>
-      </div>
-      <div class="card">
-        <div class="card-info">
-          <span class="card-tag">True Digital Group</span>
-          <h3 class="card-title">Computer Vision Specialist</h3>
-          <p class="card-desc">พัฒนาโมเดลประมวลผลภาพดิจิทัลและวิดีโอเพื่อวิเคราะห์พฤติกรรมผู้ใช้และระบบรักษาความปลอดภัย</p>
-        </div>
-        <a href="#register" class="btn-gradient">ดูรายละเอียด &rarr;</a>
-      </div>
-      <div class="card">
-        <div class="card-info">
-          <span class="card-tag">SCB 10X</span>
-          <h3 class="card-title">Prompt Engineer & GenAI Specialist</h3>
-          <p class="card-desc">วิจัยและสร้างสรรค์ Prompt Architecture พร้อมบูรณาการ AI Tools เข้ากับเวิร์กโฟลว์ธุรกิจ</p>
-        </div>
-        <a href="#register" class="btn-gradient">ดูรายละเอียด &rarr;</a>
-      </div>
-    </div>
-    <h2 class="section-title" id="services">หลักสูตรอบรม & สอบ Certify ด้าน AI</h2>
-    <div class="card-list">
-      <div class="card">
-        <div class="card-info">
-          <span class="card-tag tag-cert">ค่าลงทะเบียน 4,500 บาท (18 ชม.)</span>
-          <h3 class="card-title">1. Generative AI & LLM Architecture Masterclass</h3>
-          <p class="card-desc">เรียนรู้โครงสร้าง Large Language Models (LLM), Prompt Engineering ขั้นสูง และการประยุกต์ใช้ RAG Framework</p>
-        </div>
-        <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
-      </div>
-      <div class="card">
-        <div class="card-info">
-          <span class="card-tag tag-cert">ค่าลงทะเบียน 9,900 บาท (24 ชม.)</span>
-          <h3 class="card-title">2. Professional Data Science & Big Data Analytics</h3>
-          <p class="card-desc">เจาะลึก Big Data Tools, Predictive Analytics และ Data Visualization ระดับมืออาชีพด้วยภาษา Python</p>
-        </div>
-        <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
-      </div>
-      <div class="card">
-        <div class="card-info">
-          <span class="card-tag tag-cert">ค่าลงทะเบียน 5,900 บาท (12 ชม.)</span>
-          <h3 class="card-title">3. Advanced Prompt Engineering for Enterprise AI</h3>
-          <p class="card-desc">เทคนิคการเขียน Prompt ขั้นสูง, Chain-of-Thought และการสร้าง AI Agent สำหรับนำไปใช้ในองค์กร</p>
-        </div>
-        <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
-      </div>
-      <div class="card">
-        <div class="card-info">
-          <span class="card-tag tag-cert">ค่าลงทะเบียน 15,000 บาท (40 ชม.)</span>
-          <h3 class="card-title">4. Full-Stack AI Application Developer Bootcamp</h3>
-          <p class="card-desc">พัฒนาเว็บแอปยุคใหม่เชื่อมต่อ LLM APIs ด้วย Next.js และ Python FastAPI</p>
-        </div>
-        <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
-      </div>
-    </div>
-    <div class="glass-panel" id="register">
-      <h2 class="section-title mb-20">แบบฟอร์มลงทะเบียน</h2>
-      <form id="regForm">
-        <div class="form-group">
-          <label for="regType">วัตถุประสงค์การลงทะเบียน *</label>
-          <select id="regType" class="form-control">
-            <option value="job">สมัครงาน (Job Application)</option>
-            <option value="course">ลงทะเบียนอบรม / สอบ Certify (Course Registration)</option>
-          </select>
-        </div>
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="fullName">ชื่อ-นามสกุล *</label>
-            <input type="text" id="fullName" class="form-control" required placeholder="นายพีระพล นิ่มเขียว">
+
+  <div class="container">
+    
+    <!-- 1. ส่วน HOME (ตำแหน่งงาน AI) -->
+    <section id="home">
+      <h2 class="section-title">ตำแหน่งงาน AI & Digital ที่เปิดรับสมัคร</h2>
+      <div class="card-list">
+        
+        <div class="card">
+          <div class="card-info">
+            <span class="card-tag">KBTG</span>
+            <h3 class="card-title">Senior AI/ML Engineer</h3>
+            <p class="card-desc">ออกแบบ พัฒนา และติดตั้งระบบ Machine Learning และ LLM สำหรับระบบการเงินระดับประเทศ</p>
           </div>
-          <div class="form-group">
-            <label for="email">อีเมล *</label>
-            <input type="email" id="email" class="form-control" required placeholder="Peerapol.nimk@bumail.net">
+          <a href="#register" class="btn-gradient">สมัครตำแหน่งนี้ &rarr;</a>
+        </div>
+
+        <div class="card">
+          <div class="card-info">
+            <span class="card-tag">True Digital Group</span>
+            <h3 class="card-title">Computer Vision Specialist</h3>
+            <p class="card-desc">พัฒนาโมเดลประมวลผลภาพดิจิทัลและวิดีโอเพื่อวิเคราะห์พฤติกรรมผู้ใช้และระบบรักษาความปลอดภัย</p>
           </div>
+          <a href="#register" class="btn-gradient">สมัครตำแหน่งนี้ &rarr;</a>
         </div>
-        <div class="form-group">
-          <label for="phone">เบอร์โทรศัพท์ *</label>
-          <input type="tel" id="phone" class="form-control" required placeholder="082-160-4048">
+
+        <div class="card">
+          <div class="card-info">
+            <span class="card-tag">SCB 10X</span>
+            <h3 class="card-title">Prompt Engineer & GenAI Specialist</h3>
+            <p class="card-desc">วิจัยและสร้างสรรค์ Prompt Architecture พร้อมบูรณาการ AI Tools เข้ากับเวิร์กโฟลว์ธุรกิจ</p>
+          </div>
+          <a href="#register" class="btn-gradient">สมัครตำแหน่งนี้ &rarr;</a>
         </div>
-        <div class="form-group" id="resumeGroup">
-          <label for="resume">อัปโหลดเรซูเม่ (Resume PDF) *</label>
-          <input type="file" id="resume" class="form-control file-input">
+
+      </div>
+
+      <!-- แบบฟอร์มลงทะเบียน (เชื่อมต่อกับ Home / สมัครงานและอบรม) -->
+      <div class="glass-panel" id="register">
+        <h2 class="section-title mb-20">แบบฟอร์มลงทะเบียน</h2>
+        <form id="regForm">
+          <div class="form-group">
+            <label for="regType">วัตถุประสงค์การลงทะเบียน *</label>
+            <select id="regType" class="form-control">
+              <option value="job">สมัครงาน (Job Application)</option>
+              <option value="course">ลงทะเบียนอบรม / สอบ Certify (Course Registration)</option>
+            </select>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">ชื่อ-นามสกุล *</label>
+              <input type="text" id="fullName" class="form-control" required placeholder="นายพีระพล นิ่มเขียว">
+            </div>
+            <div class="form-group">
+              <label for="email">อีเมล *</label>
+              <input type="email" id="email" class="form-control" required placeholder="Peerapol.nimk@bumail.net">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">เบอร์โทรศัพท์ *</label>
+            <input type="tel" id="phone" class="form-control" required placeholder="082-160-4048">
+          </div>
+
+          <div class="form-group" id="resumeGroup">
+            <label for="resume">อัปโหลดเรซูเม่ (Resume PDF) *</label>
+            <input type="file" id="resume" class="form-control file-input">
+          </div>
+
+          <button type="submit" class="btn-gradient btn-full">ส่งข้อมูลลงทะเบียน</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 2. ส่วน SERVICES & CERTIFY (หลักสูตรอบรม) -->
+    <section id="services">
+      <h2 class="section-title">หลักสูตรอบรม & สอบ Certify ด้าน AI</h2>
+      <div class="card-list">
+        
+        <div class="card">
+          <div class="card-info">
+            <span class="card-tag tag-cert">ค่าลงทะเบียน 4,500 บาท (18 ชม.)</span>
+            <h3 class="card-title">1. Generative AI & LLM Architecture Masterclass</h3>
+            <p class="card-desc">เรียนรู้โครงสร้าง Large Language Models (LLM), Prompt Engineering ขั้นสูง และการประยุกต์ใช้ RAG Framework</p>
+          </div>
+          <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
         </div>
-        <button type="submit" class="btn-gradient btn-full">ส่งข้อมูลลงทะเบียน</button>
-      </form>
-    </div>
-    <div class="glass-panel" id="about">
-      <h2 class="section-title">เกี่ยวกับเรา (About TOR)</h2>
-      <div class="about-grid">
-        <div class="about-box">
-          <h4><i class="fa-solid fa-location-dot"></i> ที่อยู่สถานประกอบการ</h4>
-          <p class="text-white font-bold">มหาวิทยาลัยกรุงเทพ (ศูนย์รังสิต)</p>
-          <p class="text-muted">
-            เลขที่ 9/1 หมู่ 5 ถนนพหลโยธิน<br>
-            ตำบลคลองหนึ่ง อำเภอคลองหลวง<br>
-            จังหวัดปทุมธานี 12120
-          </p>
+
+        <div class="card">
+          <div class="card-info">
+            <span class="card-tag tag-cert">ค่าลงทะเบียน 9,900 บาท (24 ชม.)</span>
+            <h3 class="card-title">2. Professional Data Science & Big Data Analytics</h3>
+            <p class="card-desc">เจาะลึก Big Data Tools, Predictive Analytics และ Data Visualization ระดับมืออาชีพด้วยภาษา Python</p>
+          </div>
+          <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
         </div>
-        <div class="about-box">
-          <h4><i class="fa-solid fa-address-card"></i> ข้อมูลผู้ติดต่อ (Contact Information)</h4>
-          <p class="text-light"><strong>ผู้พัฒนา:</strong> นายพีระพล นิ่มเขียว</p>
-          <p class="text-light"><strong>รหัสนักศึกษา:</strong> 1680706353</p>
-          <p class="text-light"><strong>อีเมล:</strong> Peerapol.nimk@bumail.net</p>
-          <p class="text-light"><strong>เบอร์โทรศัพท์:</strong> 082-160-4048</p>
+
+        <div class="card">
+          <div class="card-info">
+            <span class="card-tag tag-cert">ค่าลงทะเบียน 5,900 บาท (12 ชม.)</span>
+            <h3 class="card-title">3. Advanced Prompt Engineering for Enterprise AI</h3>
+            <p class="card-desc">เทคนิคการเขียน Prompt ขั้นสูง, Chain-of-Thought และการสร้าง AI Agent สำหรับนำไปใช้ในองค์กร</p>
+          </div>
+          <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
+        </div>
+
+        <div class="card">
+          <div class="card-info">
+            <span class="card-tag tag-cert">ค่าลงทะเบียน 15,000 บาท (40 ชม.)</span>
+            <h3 class="card-title">4. Full-Stack AI Application Developer Bootcamp</h3>
+            <p class="card-desc">พัฒนาเว็บแอปยุคใหม่เชื่อมต่อ LLM APIs ด้วย Next.js และ Python FastAPI</p>
+          </div>
+          <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. ส่วน ABOUT TOR (ข้อมูลบริษัทและที่อยู่มหาวิทยาลัยกรุงเทพ) -->
+    <section id="about">
+      <div class="glass-panel">
+        <h2 class="section-title">เกี่ยวกับเรา (About TOR)</h2>
+        <div class="about-grid">
+          
+          <div class="about-box">
+            <h4><i class="fa-solid fa-location-dot"></i> ที่อยู่สถานประกอบการ</h4>
+            <p class="text-white font-bold">มหาวิทยาลัยกรุงเทพ (ศูนย์รังสิต)</p>
+            <p class="text-muted">
+              เลขที่ 9/1 หมู่ 5 ถนนพหลโยธิน<br>
+              ตำบลคลองหนึ่ง อำเภอคลองหลวง<br>
+              จังหวัดปทุมธานี 12120
+            </p>
+          </div>
+
+          <div class="about-box">
+            <h4><i class="fa-solid fa-address-card"></i> ข้อมูลผู้ติดต่อ (Contact Information)</h4>
+            <p class="text-light"><strong>ผู้พัฒนา:</strong> นายพีระพล นิ่มเขียว</p>
+            <p class="text-light"><strong>รหัสนักศึกษา:</strong> 1680706353</p>
+            <p class="text-light"><strong>อีเมล:</strong> Peerapol.nimk@bumail.net</p>
+            <p class="text-light"><strong>เบอร์โทรศัพท์:</strong> 082-160-4048</p>
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
+
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

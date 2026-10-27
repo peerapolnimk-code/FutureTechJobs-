@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Prompt', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,16 +12,24 @@ body {
   line-height: 1.6;
 }
 
+/* Header / Navbar แบบ 3 เมนู */
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background-color: rgba(11, 15, 25, 0.9);
+  background-color: rgba(11, 15, 25, 0.95);
   position: sticky;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: #38bdf8;
 }
 
 .nav-links {
@@ -52,6 +61,7 @@ body {
   font-weight: 600;
 }
 
+/* Layout Container */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -71,6 +81,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Cards List */
 .card-list {
   display: flex;
   flex-direction: column;
@@ -122,6 +133,7 @@ body {
   color: #94a3b8;
 }
 
+/* Buttons */
 .btn-gradient {
   background: linear-gradient(135deg, #38bdf8, #818cf8);
   color: #ffffff;
@@ -150,6 +162,7 @@ body {
   margin-top: 10px;
 }
 
+/* Panels & Forms */
 .glass-panel {
   background: #1e293b;
   border-radius: 16px;
