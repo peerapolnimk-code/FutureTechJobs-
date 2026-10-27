@@ -3,202 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FutureTechJobs - AI & Digital Career Portal</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>FutureTechJobs - Next-Gen AI & Tech Talent Platform</title>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Prompt', sans-serif; background-color: #030712; color: #f3f4f6; }
-    .glass-card { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(139, 92, 246, 0.2); }
-    .neon-glow { box-shadow: 0 0 25px rgba(139, 92, 246, 0.3); }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen flex flex-col justify-between">
-  <nav class="sticky top-0 z-50 glass-card border-b border-purple-900/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center space-x-2">
-        <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">FutureTechJobs</span>
-      </div>
-      <div class="hidden md:flex space-x-8 text-sm font-medium">
-        <a href="#jobs" class="hover:text-purple-400 transition">ตำแหน่งงาน AI</a>
-        <a href="#courses" class="hover:text-purple-400 transition">หลักสูตรอบรม & Certify</a>
-        <a href="#register" class="hover:text-purple-400 transition">ลงทะเบียน</a>
-        <a href="#about" class="hover:text-purple-400 transition">เกี่ยวกับเรา</a>
-      </div>
-    </div>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#services" class="nav-link"><i class="fa-solid fa-box-archive"></i> Services & Certify</a></li>
+      <li><a href="#about" class="nav-link"><i class="fa-solid fa-shield-halved"></i> About TOR</a></li>
+    </ul>
   </nav>
-  <header class="relative overflow-hidden py-20 px-4 text-center">
-    <div class="max-w-4xl mx-auto space-y-6">
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-        ก้าวสู่ยุคปัญญาประดิษฐ์กับ FutureTechJobs
-      </h1>
-      <p class="text-lg text-gray-400 max-w-2xl mx-auto">
-        ศูนย์รวมตำแหน่งงานสาย AI และหลักสูตรพัฒนาทักษะระดับมืออาชีพเพื่ออนาคตของคุณ
-      </p>
-      <div>
-        <a href="#register" class="inline-block px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium hover:opacity-90 transition neon-glow">
-          ลงทะเบียนประเมินทักษะ / สมัครงาน
-        </a>
+  <div class="container" id="home">
+    <h2 class="section-title">ตำแหน่งงาน AI & Digital ที่เปิดรับสมัคร</h2>
+    <div class="card-list">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-tag">KBTG</span>
+          <h3 class="card-title">Senior AI/ML Engineer</h3>
+          <p class="card-desc">ออกแบบ พัฒนา และติดตั้งระบบ Machine Learning และ LLM สำหรับระบบการเงินระดับประเทศ</p>
+        </div>
+        <a href="#register" class="btn-gradient">ดูรายละเอียด &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-tag">True Digital Group</span>
+          <h3 class="card-title">Computer Vision Specialist</h3>
+          <p class="card-desc">พัฒนาโมเดลประมวลผลภาพดิจิทัลและวิดีโอเพื่อวิเคราะห์พฤติกรรมผู้ใช้และระบบรักษาความปลอดภัย</p>
+        </div>
+        <a href="#register" class="btn-gradient">ดูรายละเอียด &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-tag">SCB 10X</span>
+          <h3 class="card-title">Prompt Engineer & GenAI Specialist</h3>
+          <p class="card-desc">วิจัยและสร้างสรรค์ Prompt Architecture พร้อมบูรณาการ AI Tools เข้ากับเวิร์กโฟลว์ธุรกิจ</p>
+        </div>
+        <a href="#register" class="btn-gradient">ดูรายละเอียด &rarr;</a>
       </div>
     </div>
-  </header>
-  <section id="jobs" class="py-16 px-4 max-w-7xl mx-auto w-full">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-white mb-2">ตำแหน่งงานปัญญาประดิษฐ์ที่เปิดรับสมัคร</h2>
-      <p class="text-gray-400">โอกาสร่วมงานกับองค์กรชั้นนำด้านเทคโนโลยีระดับประเทศ</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition">
-        <div>
-          <span class="px-3 py-1 text-xs font-semibold bg-purple-900/60 text-purple-300 rounded-full border border-purple-700/50">KBTG</span>
-          <h3 class="text-xl font-bold mt-3 mb-2 text-white">Senior AI/ML Engineer</h3>
-          <p class="text-gray-400 text-sm mb-4">ออกแบบ พัฒนา และติดตั้งระบบ Machine Learning และ LLM สำหรับระบบการเงินระดับประเทศ</p>
+    <h2 class="section-title" id="services">หลักสูตรอบรม & สอบ Certify ด้าน AI</h2>
+    <div class="card-list">
+      <div class="card">
+        <div class="card-info">
+          <span class="card-tag tag-cert">ค่าลงทะเบียน 4,500 บาท (18 ชม.)</span>
+          <h3 class="card-title">1. Generative AI & LLM Architecture Masterclass</h3>
+          <p class="card-desc">เรียนรู้โครงสร้าง Large Language Models (LLM), Prompt Engineering ขั้นสูง และการประยุกต์ใช้ RAG Framework</p>
         </div>
-        <a href="#register" class="text-cyan-400 text-sm font-medium hover:underline flex items-center">สมัครตำแหน่งนี้ &rarr;</a>
+        <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
       </div>
-      <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition">
-        <div>
-          <span class="px-3 py-1 text-xs font-semibold bg-red-900/60 text-red-300 rounded-full border border-red-700/50">True Digital Group</span>
-          <h3 class="text-xl font-bold mt-3 mb-2 text-white">Computer Vision Specialist</h3>
-          <p class="text-gray-400 text-sm mb-4">พัฒนาโมเดลประมวลผลภาพดิจิทัลและวิดีโอเพื่อวิเคราะห์พฤติกรรมผู้ใช้และระบบรักษาความปลอดภัย</p>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-tag tag-cert">ค่าลงทะเบียน 9,900 บาท (24 ชม.)</span>
+          <h3 class="card-title">2. Professional Data Science & Big Data Analytics</h3>
+          <p class="card-desc">เจาะลึก Big Data Tools, Predictive Analytics และ Data Visualization ระดับมืออาชีพด้วยภาษา Python</p>
         </div>
-        <a href="#register" class="text-cyan-400 text-sm font-medium hover:underline flex items-center">สมัครตำแหน่งนี้ &rarr;</a>
+        <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
       </div>
-      <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition">
-        <div>
-          <span class="px-3 py-1 text-xs font-semibold bg-indigo-900/60 text-indigo-300 rounded-full border border-indigo-700/50">SCB 10X</span>
-          <h3 class="text-xl font-bold mt-3 mb-2 text-white">Prompt Engineer & GenAI Specialist</h3>
-          <p class="text-gray-400 text-sm mb-4">วิจัยและสร้างสรรค์ Prompt Architecture พร้อมบูรณาการ AI Tools เข้ากับเวิร์กโฟลว์ธุรกิจ</p>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-tag tag-cert">ค่าลงทะเบียน 5,900 บาท (12 ชม.)</span>
+          <h3 class="card-title">3. Advanced Prompt Engineering for Enterprise AI</h3>
+          <p class="card-desc">เทคนิคการเขียน Prompt ขั้นสูง, Chain-of-Thought และการสร้าง AI Agent สำหรับนำไปใช้ในองค์กร</p>
         </div>
-        <a href="#register" class="text-cyan-400 text-sm font-medium hover:underline flex items-center">สมัครตำแหน่งนี้ &rarr;</a>
+        <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
       </div>
-    </div>
-  </section>
-  <section id="courses" class="py-16 px-4 max-w-7xl mx-auto w-full">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-white mb-2">หลักสูตรอบรม & สอบ Certify ด้าน AI</h2>
-      <p class="text-gray-400">พัฒนาทักษะตามกรอบสมรรถนะปัญญาประดิษฐ์ 4 มิติมาตรฐานสากล</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="glass-card p-6 rounded-2xl">
-        <div class="flex justify-between items-center mb-3">
-          <span class="px-3 py-1 text-xs font-semibold bg-cyan-900/60 text-cyan-300 rounded-full">Certify</span>
-          <span class="text-green-400 font-bold text-sm">4,500 บาท (18 ชม.)</span>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-tag tag-cert">ค่าลงทะเบียน 15,000 บาท (40 ชม.)</span>
+          <h3 class="card-title">4. Full-Stack AI Application Developer Bootcamp</h3>
+          <p class="card-desc">พัฒนาเว็บแอปยุคใหม่เชื่อมต่อ LLM APIs ด้วย Next.js และ Python FastAPI</p>
         </div>
-        <h3 class="text-xl font-bold text-white mb-2">1. Generative AI & LLM Architecture Masterclass</h3>
-        <p class="text-gray-400 text-sm">เรียนรู้โครงสร้าง Large Language Models (LLM), Prompt Engineering ขั้นสูง และการประยุกต์ใช้ RAG Framework สำหรับองค์กร</p>
-      </div>
-      <div class="glass-card p-6 rounded-2xl">
-        <div class="flex justify-between items-center mb-3">
-          <span class="px-3 py-1 text-xs font-semibold bg-cyan-900/60 text-cyan-300 rounded-full">Certify</span>
-          <span class="text-green-400 font-bold text-sm">9,900 บาท (24 ชม.)</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-2">2. Professional Data Science & Big Data Analytics</h3>
-        <p class="text-gray-400 text-sm">เจาะลึก Big Data Tools, Predictive Analytics และ Data Visualization ระดับมืออาชีพด้วยภาษา Python</p>
-      </div>
-      <div class="glass-card p-6 rounded-2xl">
-        <div class="flex justify-between items-center mb-3">
-          <span class="px-3 py-1 text-xs font-semibold bg-cyan-900/60 text-cyan-300 rounded-full">Certify</span>
-          <span class="text-green-400 font-bold text-sm">5,900 บาท (12 ชม.)</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-2">3. Advanced Prompt Engineering for Enterprise AI</h3>
-        <p class="text-gray-400 text-sm">เทคนิคการเขียน Prompt ขั้นสูง, Chain-of-Thought และการสร้าง AI Agent ในองค์กร</p>
-      </div>
-      <div class="glass-card p-6 rounded-2xl">
-        <div class="flex justify-between items-center mb-3">
-          <span class="px-3 py-1 text-xs font-semibold bg-cyan-900/60 text-cyan-300 rounded-full">Certify</span>
-          <span class="text-green-400 font-bold text-sm">15,000 บาท (40 ชม.)</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-2">4. Full-Stack AI Application Developer Bootcamp</h3>
-        <p class="text-gray-400 text-sm">พัฒนาเว็บแอปพลิเคชันยุคใหม่เชื่อมต่อ LLM APIs ด้วย Next.js และ Python FastAPI</p>
+        <a href="#register" class="btn-gradient">ลงทะเบียน &rarr;</a>
       </div>
     </div>
-  </section>
-  <section id="register" class="py-16 px-4 max-w-3xl mx-auto w-full">
-    <div class="glass-card p-8 rounded-3xl shadow-xl border border-purple-500/30">
-      <h3 class="text-2xl font-bold text-center mb-6 text-white">แบบฟอร์มลงทะเบียน & AI Skill Profiling</h3>
-      <form class="space-y-4" onsubmit="event.preventDefault(); alert('ส่งข้อมูลสำเร็จ!');">
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-1">วัตถุประสงค์การลงทะเบียน *</label>
-          <select id="regType" onchange="toggleForm()" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-purple-500">
+    <div class="glass-panel" id="register">
+      <h2 class="section-title mb-20">แบบฟอร์มลงทะเบียน</h2>
+      <form id="regForm">
+        <div class="form-group">
+          <label for="regType">วัตถุประสงค์การลงทะเบียน *</label>
+          <select id="regType" class="form-control">
             <option value="job">สมัครงาน (Job Application)</option>
             <option value="course">ลงทะเบียนอบรม / สอบ Certify (Course Registration)</option>
           </select>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-medium text-gray-300 mb-1">ชื่อ-นามสกุล *</label>
-            <input type="text" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-purple-500" placeholder="นายพีระพล นิ่มเขียว">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">ชื่อ-นามสกุล *</label>
+            <input type="text" id="fullName" class="form-control" required placeholder="นายพีระพล นิ่มเขียว">
           </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-300 mb-1">อีเมล *</label>
-            <input type="email" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-purple-500" placeholder="Peerapol.nimk@bumail.net">
+          <div class="form-group">
+            <label for="email">อีเมล *</label>
+            <input type="email" id="email" class="form-control" required placeholder="Peerapol.nimk@bumail.net">
           </div>
         </div>
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-1">เบอร์โทรศัพท์ *</label>
-          <input type="tel" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-purple-500" placeholder="082-160-4048">
+        <div class="form-group">
+          <label for="phone">เบอร์โทรศัพท์ *</label>
+          <input type="tel" id="phone" class="form-control" required placeholder="082-160-4048">
         </div>
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-1">ระดับสมรรถนะ AI (AI Skill Tier)</label>
-          <select class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-purple-500">
-            <option>ระดับเริ่มต้น (Beginner)</option>
-            <option>ระดับผู้บุกเบิก (Pioneer)</option>
-            <option>ระดับผู้สร้างสรรค์สิ่งใหม่ (Innovator)</option>
-          </select>
+        <div class="form-group" id="resumeGroup">
+          <label for="resume">อัปโหลดเรซูเม่ (Resume PDF) *</label>
+          <input type="file" id="resume" class="form-control file-input">
         </div>
-        <div id="resumeGroup">
-          <label class="block text-sm font-medium text-gray-300 mb-1">อัปโหลดเรซูเม่ / พอร์ตโฟลิโอ (Resume PDF/URL) *</label>
-          <input type="file" class="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-purple-900 file:text-purple-200 hover:file:bg-purple-800">
-        </div>
-        <div class="flex items-center space-x-2 pt-2">
-          <input type="checkbox" id="pdpa" required class="rounded bg-gray-900 border-gray-700 text-purple-600 focus:ring-purple-500">
-          <label for="pdpa" class="text-sm text-gray-400">ยินยอมให้ประมวลผลข้อมูลส่วนบุคคลตามนโยบาย PDPA</label>
-        </div>
-        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold hover:opacity-90 transition mt-4">
-          ส่งข้อมูลลงทะเบียน
-        </button>
+        <button type="submit" class="btn-gradient btn-full">ส่งข้อมูลลงทะเบียน</button>
       </form>
     </div>
-  </section>
-  <section id="about" class="py-16 px-4 max-w-7xl mx-auto w-full">
-    <div class="glass-card p-8 rounded-3xl">
-      <h2 class="text-3xl font-bold text-center text-white mb-2">เกี่ยวกับเรา (About Us)</h2>
-      <p class="text-center text-gray-400 mb-8">FutureTechJobs Co., Ltd. - แพลตฟอร์มศูนย์รวมงานและหลักสูตร AI มาตรฐานสากล</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
-          <h4 class="text-lg font-bold text-purple-400 mb-3">📍 ที่อยู่สถานประกอบการ</h4>
-          <p class="font-medium text-white mb-1">มหาวิทยาลัยกรุงเทพ (ศูนย์รังสิต)</p>
-          <p class="text-gray-400 text-sm leading-relaxed">
+    <div class="glass-panel" id="about">
+      <h2 class="section-title">เกี่ยวกับเรา (About TOR)</h2>
+      <div class="about-grid">
+        <div class="about-box">
+          <h4><i class="fa-solid fa-location-dot"></i> ที่อยู่สถานประกอบการ</h4>
+          <p class="text-white font-bold">มหาวิทยาลัยกรุงเทพ (ศูนย์รังสิต)</p>
+          <p class="text-muted">
             เลขที่ 9/1 หมู่ 5 ถนนพหลโยธิน<br>
             ตำบลคลองหนึ่ง อำเภอคลองหลวง<br>
             จังหวัดปทุมธานี 12120
           </p>
         </div>
-        <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
-          <h4 class="text-lg font-bold text-cyan-400 mb-3">👤 ข้อมูลผู้ติดต่อ (Contact Information)</h4>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li><strong class="text-white">ชื่อผู้ติดต่อ:</strong> นายพีระพล นิ่มเขียว</li>
-            <li><strong class="text-white">รหัสนักศึกษา:</strong> 1680706353</li>
-            <li><strong class="text-white">อีเมล:</strong> Peerapol.nimk@bumail.net</li>
-            <li><strong class="text-white">เบอร์โทรศัพท์:</strong> 082-160-4048</li>
-          </ul>
+        <div class="about-box">
+          <h4><i class="fa-solid fa-address-card"></i> ข้อมูลผู้ติดต่อ (Contact Information)</h4>
+          <p class="text-light"><strong>ผู้พัฒนา:</strong> นายพีระพล นิ่มเขียว</p>
+          <p class="text-light"><strong>รหัสนักศึกษา:</strong> 1680706353</p>
+          <p class="text-light"><strong>อีเมล:</strong> Peerapol.nimk@bumail.net</p>
+          <p class="text-light"><strong>เบอร์โทรศัพท์:</strong> 082-160-4048</p>
         </div>
       </div>
     </div>
-  </section>
-  <footer class="glass-card border-t border-purple-900/40 py-6 text-center text-sm text-gray-500">
-    <p>&copy; 2026 FutureTechJobs Co., Ltd. Developed by Peerapol Nimkheaw (ID: 1680706353)</p>
-  </footer>
-  <script>
-    function toggleForm() {
-      const type = document.getElementById('regType').value;
-      const group = document.getElementById('resumeGroup');
-      if (type === 'course') {
-        group.style.display = 'none';
-      } else {
-        group.style.display = 'block';
-      }
-    }
-  </script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
